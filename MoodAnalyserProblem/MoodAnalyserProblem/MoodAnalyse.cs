@@ -10,7 +10,7 @@ namespace MoodAnalyserProblem
     {
         public string AnalyseMood(string message)
         {
-            if(message.Contains("Sad"))
+            if (message.Contains("Sad"))
             {
                 return "Sad";
             }
@@ -18,7 +18,6 @@ namespace MoodAnalyserProblem
             {
                 return "Happy";
             }
-
         }
     }
 }
