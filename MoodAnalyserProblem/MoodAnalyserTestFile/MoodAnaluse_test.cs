@@ -17,7 +17,15 @@ namespace MoodAnalyserTestFile
             string result = moodAnalyse.AnalyseMood();
             Assert.AreEqual(result, "Sad");
         }
-        
+
+        [Test]
+        public void GivenHappyMood_ShouldReturnHappy()
+        {
+            MoodAnalyse moodAnalyse = new MoodAnalyse("I am in Happy Mood");
+
+            string result = moodAnalyse.AnalyseMood();
+            Assert.AreEqual(result, "Happy");
+        }
     }
 }
 
