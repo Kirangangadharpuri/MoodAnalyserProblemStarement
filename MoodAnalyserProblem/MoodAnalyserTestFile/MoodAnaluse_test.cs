@@ -9,7 +9,15 @@ namespace MoodAnalyserTestFile
 {
     public class MoodAnaluse_test
     {
-       
+        [Test]
+        public void GivenSadMood_ShouldReturnSad()
+        {
+            MoodAnalyse moodAnalyse = new MoodAnalyse("I am in Sad Mood");
+
+            string result = moodAnalyse.AnalyseMood();
+            Assert.AreEqual(result, "Sad");
+        }
+        
     }
 }
 
