@@ -9,7 +9,7 @@ namespace MoodAnalyserTestFile
 {
     public class MoodAnaluse_test
     {
-        [Test]
+        [Test]//test is Attributes which arks the method as callable from the NUnit test runner 
         public void GivenSadMood_ShouldReturnSad()
         {
             MoodAnalyse moodAnalyse = new MoodAnalyse("I am in Sad Mood");
@@ -34,6 +34,7 @@ namespace MoodAnalyserTestFile
             string result = moodAnalyse.AnalyseMood();
             Assert.AreEqual(result, "Happy");
         }
+        
     }
 }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static MoodAnalyserProblem.MoodAnalyse_CustomException;
 
 namespace MoodAnalyserProblem
 {
@@ -31,8 +32,8 @@ namespace MoodAnalyserProblem
             }
             catch (NullReferenceException)
             {
-                return "Happy";
-
+                //return "Happy";
+                throw new MoodAnalyse_CustomException("message should not be null", MoodAnalyser_ExceptionType.NULL_MOOD);
             }
         }
     }
