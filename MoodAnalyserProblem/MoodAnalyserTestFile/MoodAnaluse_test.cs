@@ -34,7 +34,23 @@ namespace MoodAnalyserTestFile
             string result = moodAnalyse.AnalyseMood();
             Assert.AreEqual(result, "Happy");
         }
-        
+        [Test]
+        public void GivenNullMessage_ShouldThrowCustomException()
+        {
+            try
+            {
+                //Arrange
+                MoodAnalyse moodAnalyse = new MoodAnalyse("I am in Happy Mood");
+                //Act
+                string result = moodAnalyse.AnalyseMood();
+            }
+            catch (MoodAnalyse_CustomException ex)
+            {
+                //Assert
+                Assert.AreEqual(ex.Message, "message should not be null");
+
+            }
+        }
     }
 }
 
