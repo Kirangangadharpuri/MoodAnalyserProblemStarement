@@ -40,7 +40,7 @@ namespace MoodAnalyserTestFile
             try
             {
                 //Arrange
-                MoodAnalyse moodAnalyse = new MoodAnalyse("I am in Happy Mood");
+                MoodAnalyse moodAnalyse = new MoodAnalyse(null);
                 //Act
                 string result = moodAnalyse.AnalyseMood();
             }
